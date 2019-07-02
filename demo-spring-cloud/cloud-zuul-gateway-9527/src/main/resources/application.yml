@@ -1,0 +1,33 @@
+server:
+  port: 9527
+
+# http://myzuul.com:9527/cloud-dept/dept/get/1
+spring:
+  application:
+    name: cloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: gateway-9527.com #自定义hystrix相关的服务名称信息
+    prefer-ip-address: true      #访问信息有IP信息提示
+
+info:
+  app.name: demo-spring-cloud
+  company.name: www.huatai.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+# 使用mydept映射真实服务名 http://myzuul.com:9527/mydept/dept/get/1,并忽略原真实名称的路径
+# "*"，多个服务被忽略使用"*"，单个使用即可
+# prefix，统一前缀，路径以/cloud/mydept/**代替/cloud-dept/**
+zuul:
+  routes:
+    mydept.serviceId: cloud-dept
+    mydept.path: /mydept/**
+#  ignored-services: cloud-dept
+  ignored-services: "*"
+  prefix: /cloud
+

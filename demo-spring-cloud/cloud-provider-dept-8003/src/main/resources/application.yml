@@ -1,0 +1,36 @@
+server:
+  port: 8003
+mybatis:
+  config-location: classpath:mybatis/mybatis-cfg.xml  #mybatis配置文件所在目录
+  type-aliases-package: com.bob.cloud.entity  #所有entity别名类所在包
+  mapper-locations: classpath:mybatis/mapper/**/*.xml #Mapper映射文件
+
+spring:
+  application:
+    name: cloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver  #MySQL驱动包
+    url: jdbc:mysql://192.168.174.8:3306/cloudDB03 #数据库名称
+    username: root
+    password: bob225812
+    dbcp2:
+      min-idle: 5 #数据库连接池的最小维持连接数
+      initial-size: 5 #初始化连接数
+      max-total: 5  #最大连接数
+      max-wait-millis: 200  #等待连接获取的最大超时时间
+eureka:
+  client:
+    service-url:
+      #http://localhost:7000/eureka/
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: CLOUD-DEPT-8003 #主机名称：服务名称
+    prefer-ip-address: true      #访问信息有IP信息提示
+
+info:
+  app.name: demo-spring-cloud
+  company.name: huatai
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
