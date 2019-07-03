@@ -1,0 +1,20 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhubo007/cloud-config.git
+          timeout: 5000
+          password: bob225812
+          username: zhubo007
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9001/eureka/

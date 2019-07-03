@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: cloud-config-client #需要从GitHub上读取的资源名称，注意没有yml后缀名
+      profile: test  #本次访问的配置项
+      label: master #分支
+      uri: http://config3344.com:3344 #本微服务启动后先去找3344号服务，通过该SpringCloudConfig获取GItHub的服务地址
