@@ -1,18 +1,3 @@
-server:
-  port: 7003
-eureka:
-  instance:
-    hostname: eureka7003.com
-  client:
-    register-with-eureka: false #false表示不向注册中心注册自己
-    fetch-registry: false #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
-    service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
-
-  server:
-    #默认开启自我保护机制，不建议关闭
-    enable-self-preservation: true
 spring:
   application:
-    name:  eureka-server-demo
-
+    name: cloud-eureka-server

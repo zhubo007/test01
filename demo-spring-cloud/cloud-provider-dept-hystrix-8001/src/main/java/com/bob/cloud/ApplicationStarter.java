@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * @author bobo
  * @create 2019-06-29 13:08
+ * 熔断器示例
  */
 @SpringBootApplication
 @EnableEurekaClient //本服务启动后自动注册金eureka服务中

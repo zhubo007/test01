@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author bobo
  * @create 2019-07-01 14:21
- * 调用异常，或者Provider被意外关闭
+ * 调用异常，或者Provider被意外关闭，则会进入当前处理类，而不会去请求服务提供方
  */
 @Component
 public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptClientService> {

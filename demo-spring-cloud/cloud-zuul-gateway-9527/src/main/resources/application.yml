@@ -5,6 +5,10 @@ server:
 spring:
   application:
     name: cloud-zuul-gateway
+  security:
+    user:
+      name: zuul
+      password: zuul
 
 eureka:
   client:
@@ -30,4 +34,5 @@ zuul:
 #  ignored-services: cloud-dept
   ignored-services: "*"
   prefix: /cloud
+
 

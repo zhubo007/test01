@@ -7,6 +7,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * @author bobo
  * @create 2019-06-29 20:22
+ * 远程配置服务器
  */
 @SpringBootApplication
 @EnableConfigServer
