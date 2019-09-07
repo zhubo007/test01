@@ -2,9 +2,7 @@ package com.bob.cloud.controller;
 
 import com.bob.cloud.entity.Dept;
 import com.bob.cloud.service.DeptClientService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
