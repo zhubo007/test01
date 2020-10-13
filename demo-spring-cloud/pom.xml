@@ -31,7 +31,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <lombok.version>1.18.8</lombok.version>
         <log4j.version>1.2.17</log4j.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <springloaded.version>1.2.8.RELEASE</springloaded.version>
     </properties>
 
